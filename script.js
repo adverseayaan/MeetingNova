@@ -72,3 +72,31 @@ function getResponse(input) {
             return "I'm not sure how to respond to that.";
     }
 }
+// Enhanced response logic
+const responses = {
+    "hello": "Hi there! How can I help you today?",
+    "how are you": "I'm just a bunch of code, but I'm feeling great! How about you?",
+    "who are you": "I'm Nova, your digital companion.",
+    "bye": "Goodbye! Take care.",
+    "what's your name": "I'm Nova, nice to meet you!",
+    "love you": "That's sweet! I love you too in a digital way.",
+    "tell me a joke": "Why don’t skeletons fight each other? They don’t have the guts."
+};
+
+function getResponse(message) {
+    const lowerCaseMessage = message.toLowerCase();
+    for (const key in responses) {
+        if (lowerCaseMessage.includes(key)) {
+            return responses[key];
+        }
+    }
+    return "I'm not sure how to respond to that.";
+}
+
+sendButton.addEventListener("click", () => {
+    const userInput = userInputField.value;
+    if (userInput) {
+        novaText.textContent = `You said: "${userInput}". ${getResponse(userInput)}`;
+        userInputField.value = "";
+    }
+});
