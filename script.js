@@ -96,7 +96,7 @@ function getResponse(message) {
 sendButton.addEventListener("click", () => {
     const userInput = userInputField.value;
     if (userInput) {
-        novaText.textContent = `You said: "${userInput}". ${getResponse(userInput)}`;
+        displayMessage(`You said: "${userInput}". ${getResponse(userInput)}`;
         userInputField.value = "";
     }
 });
