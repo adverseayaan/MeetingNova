@@ -1,0 +1,63 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0d0d0d; /* Deep cosmic black */
+    color: #f0f0f0; /* Soft white */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Styling */
+.container {
+    text-align: center;
+}
+
+/* Nova's Image */
+.nova-image img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%; /* Circular face */
+    object-fit: cover;
+    border: 2px solid #8e44ad; /* Soft violet border */
+    box-shadow: 0 0 20px rgba(142, 68, 173, 0.7);
+}
+
+/* Dialogue Box */
+.dialogue-box {
+    margin-top: 20px;
+}
+
+#nova-text {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Input and Button */
+#user-input {
+    padding: 10px;
+    width: 70%;
+    background-color: #1c1c1c;
+    border: 1px solid #8e44ad;
+    color: #f0f0f0;
+    border-radius: 5px;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #8e44ad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #732d91;
+}
