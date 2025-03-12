@@ -51,3 +51,24 @@ function handleInput(event) {
     displayNovaMessage(response);
     userInputElement.value = "";
 }
+function getResponse(input) {
+    input = input.toLowerCase().trim();
+
+    switch (input) {
+        case 'hi':
+        case 'hello':
+            return "Hello! How can I help you today?";
+        case 'how are you':
+            return "I'm just code, but I'm here to help!";
+        case 'who are you':
+            return "I'm Nova, your digital companion.";
+        case 'what is your purpose':
+            return "My purpose is to assist you with information and conversation.";
+        case 'thank you':
+            return "You're welcome!";
+        case 'bye':
+            return "Goodbye! Take care.";
+        default:
+            return "I'm not sure how to respond to that.";
+    }
+}
