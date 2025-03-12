@@ -61,3 +61,66 @@ button {
 button:hover {
     background-color: #732d91;
 }
+/* Center input and button */
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Input box styling */
+input[type="text"] {
+    width: 70%; 
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    background-color: #222;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Button styling */
+button {
+    padding: 12px 20px;
+    margin-left: 10px;
+    background-color: #7d3cff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #5a2cbf;
+}
+
+/* Chat bubble style */
+.message-output {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    max-width: 70%;
+    word-wrap: break-word;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
