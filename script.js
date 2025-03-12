@@ -100,3 +100,9 @@ sendButton.addEventListener("click", () => {
         userInputField.value = "";
     }
 });
+if (responses[userMessage]) {
+    messageOutput.textContent = responses[userMessage];
+} else {
+    messageOutput.textContent = "Hmm, I didn't get that.";
+    console.log("Unrecognized input:", userMessage);
+}
