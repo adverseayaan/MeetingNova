@@ -106,3 +106,21 @@ if (responses[userMessage]) {
     messageOutput.textContent = "Hmm, I didn't get that.";
     console.log("Unrecognized input:", userMessage);
 }
+function displayMessage(text) {
+    messageOutput.textContent = "";
+    let index = 0;
+    const interval = setInterval(() => {
+        if (index < text.length) {
+            messageOutput.textContent += text.charAt(index);
+            index++;
+        } else {
+            clearInterval(interval);
+        }
+    }, 30); // Speed of typing (30ms)
+}
+
+if (responses[userMessage]) {
+    displayMessage(responses[userMessage]);
+} else {
+    displayMessage("I'm not sure how to respond to that.");
+}
